@@ -27,8 +27,6 @@ public class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
 
         builder.HasOne(x => x.Role)
             .WithMany()
-            .HasForeignKey(x => x.RoleId)
-            .OnDelete(DeleteBehavior.Restrict);
-
+            .HasForeignKey(x => x.RoleId);
     }
 }

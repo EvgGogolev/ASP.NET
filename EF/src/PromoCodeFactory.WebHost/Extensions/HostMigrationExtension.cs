@@ -19,8 +19,9 @@ public static class HostMigrationExtension
             {
                 try
                 {
-                    await context.Database.EnsureDeletedAsync();
-                    await context.Database.MigrateAsync();
+                    context.Database.EnsureDeleted();
+                    context.Database.EnsureCreated();
+                    context.Database.Migrate();
                     
                 }
                 catch (Exception e)
