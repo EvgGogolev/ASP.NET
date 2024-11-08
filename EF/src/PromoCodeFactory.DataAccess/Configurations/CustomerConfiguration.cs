@@ -9,7 +9,7 @@ public class CustomerConfiguration  : IEntityTypeConfiguration<Customer>
 {
     public void Configure(EntityTypeBuilder<Customer> builder)
     {
-        BaseEntityConfiguration.ConfigureBaseEntity(builder);
+        builder.ConfigureBaseEntity();
 
         builder.Property(x => x.FirstName)
             .IsRequired()

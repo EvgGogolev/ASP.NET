@@ -8,7 +8,7 @@ public class EmployeeConfiguration : IEntityTypeConfiguration<Employee>
 {
     public void Configure(EntityTypeBuilder<Employee> builder)
     {
-        BaseEntityConfiguration.ConfigureBaseEntity(builder);
+        builder.ConfigureBaseEntity();
         
         builder.Property(x => x.Email)
             .IsRequired()

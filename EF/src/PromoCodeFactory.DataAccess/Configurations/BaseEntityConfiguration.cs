@@ -13,8 +13,8 @@ public static class BaseEntityConfiguration
         builder.HasKey(x => x.Id);
 
         builder.Property(x => x.CreatedAt)
-            .HasConversion<DateTime>()
-            .HasDefaultValue(DateTime.Now);
+            .HasDefaultValueSql("CURRENT_TIMESTAMP")
+            .ValueGeneratedOnAdd();
 
         builder.Property(x => x.UpdatedAt)
             .HasConversion<DateTime>();

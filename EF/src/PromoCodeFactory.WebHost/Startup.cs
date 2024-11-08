@@ -16,7 +16,7 @@ namespace PromoCodeFactory.WebHost
         public void ConfigureServices(IServiceCollection services)
         {
             services.AddControllers();
-            ServiceExtension.AddPromoCodesDbContext(services,"Data Source=PromoCodeFactory.db");
+            services.AddPromoCodesDbContext("Data Source=PromoCodeFactory.db");
             services.AddOpenApiDocument(options =>
             {
                 options.Title = "PromoCode Factory API Doc";

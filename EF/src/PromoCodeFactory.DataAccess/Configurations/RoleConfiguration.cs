@@ -9,7 +9,7 @@ public class RoleConfiguration : IEntityTypeConfiguration<Role>
 {
     public void Configure(EntityTypeBuilder<Role> builder)
     {
-        BaseEntityConfiguration.ConfigureBaseEntity(builder);
+        builder.ConfigureBaseEntity();
 
         builder.Property(x => x.Name)
             .IsRequired()

@@ -9,7 +9,7 @@ public class PreferenceConfiguration : IEntityTypeConfiguration<Preference>
 {
     public void Configure(EntityTypeBuilder<Preference> builder)
     {
-        BaseEntityConfiguration.ConfigureBaseEntity(builder);
+        builder.ConfigureBaseEntity();
 
         builder.Property(x => x.Name)
             .IsRequired()

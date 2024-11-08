@@ -8,7 +8,7 @@ public class PromoCodeConfiguration : IEntityTypeConfiguration<PromoCode>
 {
     public void Configure(EntityTypeBuilder<PromoCode> builder)
     {
-        BaseEntityConfiguration.ConfigureBaseEntity(builder);
+        builder.ConfigureBaseEntity();
 
         builder.Property(x => x.Code)
             .IsRequired()
