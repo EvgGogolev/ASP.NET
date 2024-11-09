@@ -6,6 +6,7 @@ using Microsoft.Extensions.Hosting;
 using PromoCodeFactory.DataAccess;
 using Microsoft.Extensions.Configuration;
 using PromoCodeFactory.DataAccess.Extensions;
+using PromoCodeFactory.DataAccess.Repositories;
 
 namespace PromoCodeFactory.WebHost
 {
@@ -15,6 +16,7 @@ namespace PromoCodeFactory.WebHost
         // For more information on how to configure your application, visit https://go.microsoft.com/fwlink/?LinkID=398940
         public void ConfigureServices(IServiceCollection services)
         {
+            services.AddScoped<CustomerRepository>();
             services.AddControllers();
             services.AddPromoCodesDbContext("Data Source=PromoCodeFactory.db");
             services.AddOpenApiDocument(options =>
