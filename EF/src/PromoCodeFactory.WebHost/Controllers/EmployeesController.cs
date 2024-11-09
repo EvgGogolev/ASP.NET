@@ -66,7 +66,7 @@ namespace PromoCodeFactory.WebHost.Controllers
                     Description = employee.Role.Description
                 },
                 FullName = employee.FullName,
-                AppliedPromocodesCount = employee.AppliedPromocodesCount
+                AppliedPromocodesCount = employee.AppliedPromoCodesCount
             };
 
             return employeeModel;
